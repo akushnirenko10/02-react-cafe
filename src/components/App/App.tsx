@@ -3,8 +3,8 @@ import type { Votes, VoteType } from "../../types/votes";
 import CafeInfo from "../CafeInfo/CafeInfo";
 import Notification from "../Notification/Notification";
 import VoteOptions from "../VoteOptions/VoteOptions";
-import VoteStatus from "../VoteStats/VoteStats";
 import css from "./App.module.css";
+import VoteStats from "../VoteStats/VoteStats";
 
 export default function App() {
   const [votes, setVotes] = useState<Votes>({
@@ -39,7 +39,7 @@ export default function App() {
         canReset={canReset}
       />
       {totalVotes ? (
-        <VoteStatus
+        <VoteStats
           votes={votes}
           totalVotes={totalVotes}
           positiveRate={positiveRate}
